@@ -5,9 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-                <form method="post" action="{% url 'confirm_reply' rp.id %}">
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Загрузить" />
+</form>
+<form method="post" action="{% url 'index' rp.id %}">
                     {% csrf_token %}
-                    <button type="submit">Принять отклик</button>
+                    <button type="submit">Получить количество слов</button>
                 </form>
 </body>
 </html>
