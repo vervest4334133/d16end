@@ -9,3 +9,4 @@ class WordForm(forms.ModelForm):
         fields = [
             'file',
         ]
+

@@ -5,14 +5,21 @@
     <title>Title</title>
 </head>
 <body>
+
 <form action="" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Загрузить" />
 </form>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Сколько слов?" />
+</form>
 <form method="post" action="{% url 'index' rp.id %}">
                     {% csrf_token %}
-                    <button type="submit">Получить количество слов</button>
-                </form>
+    <button type="submit">Очистка</button>
+</form>
+
 </body>
 </html>
